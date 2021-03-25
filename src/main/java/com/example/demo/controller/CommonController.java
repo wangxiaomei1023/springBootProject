@@ -16,4 +16,9 @@ public class CommonController {
     public String index(){
         return "index";
     }
+
+    @RequestMapping("/aaa")
+    public String aaa(){
+        return "aaa";
+    }
 }
