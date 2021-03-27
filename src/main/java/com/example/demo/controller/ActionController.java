@@ -22,8 +22,7 @@ public class ActionController {
 
     @RequestMapping("/httpRequest")
     @ResponseBody
-    public String sendHttpRequest(HttpServletRequest httpServletRequest){
-        String request=httpServletRequest.getParameter("request");
+    public String sendHttpRequest(String request){
         String response= requestManagerImpl.getHttpRequestResult(request);
         return response;
     }

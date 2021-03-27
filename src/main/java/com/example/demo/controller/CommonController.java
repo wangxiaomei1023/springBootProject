@@ -17,8 +17,64 @@ public class CommonController {
         return "index";
     }
 
-    @RequestMapping("/aaa")
-    public String aaa(){
-        return "aaa";
+    @RequestMapping("/httpRequestTest")
+    public String httpRequestTest(){
+        return "httpRequestTest";
+    }
+
+    @RequestMapping("/blank-page")
+    public String blankPage(){
+        return "blank-page";
+    }
+
+    @RequestMapping("/charts")
+    public String charts(){
+        return "charts";
+    }
+
+    @RequestMapping("/compose")
+    public String compose(){
+        return "compose";
+    }
+
+    @RequestMapping("/forms")
+    public String forms(){
+        return "forms";
+    }
+
+    @RequestMapping("/general")
+    public String general(){
+        return "general";
+    }
+
+    @RequestMapping("/grids")
+    public String grids(){
+        return "grids";
+    }
+
+    @RequestMapping("/inbox")
+    public String inbox(){
+        return "inbox";
+    }
+
+    @RequestMapping("/media")
+    public String media(){
+        return "media";
+    }
+    @RequestMapping("/tables")
+    public String tables(){
+        return "tables";
+    }
+    @RequestMapping("/typography")
+    public String typography(){
+        return "typography";
+    }
+    @RequestMapping("/validation")
+    public String validation(){
+        return "validation";
+    }
+    @RequestMapping("/widgets")
+    public String widgets(){
+        return "widgets";
     }
 }

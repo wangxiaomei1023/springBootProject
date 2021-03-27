@@ -30,7 +30,7 @@ public class RequestManager implements RequestManagerImpl {
         String url=requestParams.getString("url");
         String param=requestParams.getString("param");
         try {
-            if(requestType.equals("Get")){
+            if(requestType.equals("GET")){
                 response=sendGet(url,param);
             }else {
 
@@ -46,20 +46,7 @@ public class RequestManager implements RequestManagerImpl {
     public String sendGet(String url,String params) throws Exception{
         String result=null;
         StringBuilder stringBuilder=new StringBuilder();
-        stringBuilder.append(url+"?");
-        JSONObject paramsjson=JSONObject.parseObject(params);
-        //通过迭代器获得json当中所有的key值
-        Set<String> set = paramsjson.keySet();
-        for (Iterator iterator = set.iterator(); iterator.hasNext();) {
-            String key = (String) iterator.next();
-            String value=paramsjson.getString(key);
-            stringBuilder.append(key);
-            stringBuilder.append("=");
-            stringBuilder.append(value);
-            if (iterator.hasNext()){
-                stringBuilder.append("&");
-            }
-        }
+        stringBuilder.append(url+"?"+params);
 
         CloseableHttpClient client = null;
         CloseableHttpResponse response = null;
