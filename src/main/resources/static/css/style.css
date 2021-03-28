@@ -90,6 +90,7 @@ button#showLeftPush:hover {
 /*--push-menu-css--*/
 .cbp-spmenu {
 	position: fixed;
+	overflow: scroll;
 }
 .cbp-spmenu-vertical {
     width: 309px;
